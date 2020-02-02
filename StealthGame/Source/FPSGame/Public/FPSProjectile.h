@@ -18,6 +18,7 @@ class AFPSProjectile : public AActor
 
 
 
+
 protected:
 
 	/** Sphere collision component */
