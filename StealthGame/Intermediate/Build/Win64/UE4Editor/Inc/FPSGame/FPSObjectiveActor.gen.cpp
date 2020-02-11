@@ -69,7 +69,7 @@ void EmptyLinkFunctionForGeneratedCodeFPSObjectiveActor() {}
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AFPSObjectiveActor_Statics::NewProp_PickupFX = { "PickupFX", nullptr, (EPropertyFlags)0x0020080000010001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFPSObjectiveActor, PickupFX), Z_Construct_UClass_UParticleSystem_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AFPSObjectiveActor_Statics::NewProp_PickupFX_MetaData, ARRAY_COUNT(Z_Construct_UClass_AFPSObjectiveActor_Statics::NewProp_PickupFX_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFPSObjectiveActor_Statics::NewProp_SphereComponent_MetaData[] = {
-		{ "Category", "Compomnents" },
+		{ "Category", "Components" },
 		{ "Comment", "//It is to indicate a collision component\n" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Public/FPSObjectiveActor.h" },
@@ -79,7 +79,7 @@ void EmptyLinkFunctionForGeneratedCodeFPSObjectiveActor() {}
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AFPSObjectiveActor_Statics::NewProp_SphereComponent = { "SphereComponent", nullptr, (EPropertyFlags)0x00200800000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFPSObjectiveActor, SphereComponent), Z_Construct_UClass_USphereComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AFPSObjectiveActor_Statics::NewProp_SphereComponent_MetaData, ARRAY_COUNT(Z_Construct_UClass_AFPSObjectiveActor_Statics::NewProp_SphereComponent_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFPSObjectiveActor_Statics::NewProp_MeshComponent_MetaData[] = {
-		{ "Category", "Compomnents" },
+		{ "Category", "Components" },
 		{ "Comment", "//This is to indicate that the objective exist\n" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Public/FPSObjectiveActor.h" },
@@ -119,7 +119,7 @@ void EmptyLinkFunctionForGeneratedCodeFPSObjectiveActor() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AFPSObjectiveActor, 1216890137);
+	IMPLEMENT_CLASS(AFPSObjectiveActor, 2412281171);
 	template<> FPSGAME_API UClass* StaticClass<AFPSObjectiveActor>()
 	{
 		return AFPSObjectiveActor::StaticClass();

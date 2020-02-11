@@ -22,11 +22,11 @@ public:
 protected:
 
 	//This is to indicate that the objective exist
-	UPROPERTY(VisibleAnywhere, Category = "Compomnents")
+	UPROPERTY(VisibleAnywhere, Category = "Components")
 
 	UStaticMeshComponent* MeshComponent;
 
-	UPROPERTY(VisibleAnywhere,Category="Compomnents")
+	UPROPERTY(VisibleAnywhere,Category="Components")
 	//It is to indicate a collision component
 	USphereComponent* SphereComponent;
 
