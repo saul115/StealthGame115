@@ -8,13 +8,48 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class UPrimitiveComponent;
+class AActor;
+struct FHitResult;
 #ifdef FPSGAME_BlackHole_generated_h
 #error "BlackHole.generated.h already included, missing '#pragma once' in BlackHole.h"
 #endif
 #define FPSGAME_BlackHole_generated_h
 
-#define StealthGame_Source_FPSGame_Public_BlackHole_h_12_RPC_WRAPPERS
-#define StealthGame_Source_FPSGame_Public_BlackHole_h_12_RPC_WRAPPERS_NO_PURE_DECLS
+#define StealthGame_Source_FPSGame_Public_BlackHole_h_12_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execCharacterOverlap) \
+	{ \
+		P_GET_OBJECT(UPrimitiveComponent,Z_Param_OverlappedComponent); \
+		P_GET_OBJECT(AActor,Z_Param_OtherActor); \
+		P_GET_OBJECT(UPrimitiveComponent,Z_Param_OtherComponent); \
+		P_GET_PROPERTY(UIntProperty,Z_Param_BodyIndex); \
+		P_GET_UBOOL(Z_Param_bFromSweep); \
+		P_GET_STRUCT_REF(FHitResult,Z_Param_Out_SweepResult); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->CharacterOverlap(Z_Param_OverlappedComponent,Z_Param_OtherActor,Z_Param_OtherComponent,Z_Param_BodyIndex,Z_Param_bFromSweep,Z_Param_Out_SweepResult); \
+		P_NATIVE_END; \
+	}
+
+
+#define StealthGame_Source_FPSGame_Public_BlackHole_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execCharacterOverlap) \
+	{ \
+		P_GET_OBJECT(UPrimitiveComponent,Z_Param_OverlappedComponent); \
+		P_GET_OBJECT(AActor,Z_Param_OtherActor); \
+		P_GET_OBJECT(UPrimitiveComponent,Z_Param_OtherComponent); \
+		P_GET_PROPERTY(UIntProperty,Z_Param_BodyIndex); \
+		P_GET_UBOOL(Z_Param_bFromSweep); \
+		P_GET_STRUCT_REF(FHitResult,Z_Param_Out_SweepResult); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->CharacterOverlap(Z_Param_OverlappedComponent,Z_Param_OtherActor,Z_Param_OtherComponent,Z_Param_BodyIndex,Z_Param_bFromSweep,Z_Param_Out_SweepResult); \
+		P_NATIVE_END; \
+	}
+
+
 #define StealthGame_Source_FPSGame_Public_BlackHole_h_12_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesABlackHole(); \
@@ -57,7 +92,14 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ABlackHole); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ABlackHole)
 
 
-#define StealthGame_Source_FPSGame_Public_BlackHole_h_12_PRIVATE_PROPERTY_OFFSET
+#define StealthGame_Source_FPSGame_Public_BlackHole_h_12_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__CharacterComponent() { return STRUCT_OFFSET(ABlackHole, CharacterComponent); } \
+	FORCEINLINE static uint32 __PPO__CapsuleComponent() { return STRUCT_OFFSET(ABlackHole, CapsuleComponent); } \
+	FORCEINLINE static uint32 __PPO__OuterSphere() { return STRUCT_OFFSET(ABlackHole, OuterSphere); } \
+	FORCEINLINE static uint32 __PPO__Particle115() { return STRUCT_OFFSET(ABlackHole, Particle115); } \
+	FORCEINLINE static uint32 __PPO__Sound115() { return STRUCT_OFFSET(ABlackHole, Sound115); }
+
+
 #define StealthGame_Source_FPSGame_Public_BlackHole_h_9_PROLOG
 #define StealthGame_Source_FPSGame_Public_BlackHole_h_12_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
