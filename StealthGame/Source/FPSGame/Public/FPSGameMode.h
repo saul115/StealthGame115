@@ -6,14 +6,25 @@
 #include "GameFramework/GameModeBase.h"
 #include "FPSGameMode.generated.h"
 
+class APawn;
+
 UCLASS()
 class AFPSGameMode : public AGameModeBase
 {
 	GENERATED_BODY()
 
+
+
 public:
 
 	AFPSGameMode();
+
+	void CompleteMission(APawn* InstigatorPawn);
+
+	UFUNCTION(BlueprintImplementableEvent, Category = "GameMode")
+	void MissionCompleted(APawn* InstigatorPawn);
+
+
 };
 
 
