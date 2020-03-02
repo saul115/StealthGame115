@@ -15,6 +15,7 @@ AAIEnemy::AAIEnemy()
 	AIPawn = CreateDefaultSubobject<UPawnSensingComponent>(TEXT("AI Pawn Component"));
 
 	AIPawn->OnSeePawn.AddDynamic(this, &AAIEnemy::PawnSeen);
+	AIPawn->OnHearNoise.AddDynamic(this, &AAIEnemy::HearNoise);
 
 }
 
@@ -33,6 +34,16 @@ void AAIEnemy::PawnSeen(APawn* SeenPawn)
 	}
 
 	DrawDebugSphere(GetWorld(),SeenPawn->GetActorLocation(),15.0f,20,FColor::Green,true,20.0f);
+}
+
+void AAIEnemy::HearNoise(APawn* NoiseInstigator, const FVector& Location, float Volume)
+{
+	if (NoiseInstigator == nullptr)
+	{
+		return;
+	}
+
+	DrawDebugSphere(GetWorld(), Location, 32.f, 12, FColor::Orange, false, 10.f);
 }
 
 // Called every frame

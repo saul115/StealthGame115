@@ -17,17 +17,68 @@ void EmptyLinkFunctionForGeneratedCodeAIEnemy() {}
 	FPSGAME_API UClass* Z_Construct_UClass_AAIEnemy();
 	ENGINE_API UClass* Z_Construct_UClass_ACharacter();
 	UPackage* Z_Construct_UPackage__Script_FPSGame();
-	FPSGAME_API UFunction* Z_Construct_UFunction_AAIEnemy_PawnSeen();
+	FPSGAME_API UFunction* Z_Construct_UFunction_AAIEnemy_HearNoise();
+	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 	ENGINE_API UClass* Z_Construct_UClass_APawn_NoRegister();
+	FPSGAME_API UFunction* Z_Construct_UFunction_AAIEnemy_PawnSeen();
 	AIMODULE_API UClass* Z_Construct_UClass_UPawnSensingComponent_NoRegister();
 // End Cross Module References
 	void AAIEnemy::StaticRegisterNativesAAIEnemy()
 	{
 		UClass* Class = AAIEnemy::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
+			{ "HearNoise", &AAIEnemy::execHearNoise },
 			{ "PawnSeen", &AAIEnemy::execPawnSeen },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_AAIEnemy_HearNoise_Statics
+	{
+		struct AIEnemy_eventHearNoise_Parms
+		{
+			APawn* NoiseInstigator;
+			FVector Location;
+			float Volume;
+		};
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_Volume;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Location_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_Location;
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_NoiseInstigator;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_AAIEnemy_HearNoise_Statics::NewProp_Volume = { "Volume", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AIEnemy_eventHearNoise_Parms, Volume), METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AAIEnemy_HearNoise_Statics::NewProp_Location_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AAIEnemy_HearNoise_Statics::NewProp_Location = { "Location", nullptr, (EPropertyFlags)0x0010000008000182, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AIEnemy_eventHearNoise_Parms, Location), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UFunction_AAIEnemy_HearNoise_Statics::NewProp_Location_MetaData, ARRAY_COUNT(Z_Construct_UFunction_AAIEnemy_HearNoise_Statics::NewProp_Location_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_AAIEnemy_HearNoise_Statics::NewProp_NoiseInstigator = { "NoiseInstigator", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AIEnemy_eventHearNoise_Parms, NoiseInstigator), Z_Construct_UClass_APawn_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AAIEnemy_HearNoise_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AAIEnemy_HearNoise_Statics::NewProp_Volume,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AAIEnemy_HearNoise_Statics::NewProp_Location,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AAIEnemy_HearNoise_Statics::NewProp_NoiseInstigator,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AAIEnemy_HearNoise_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/AIEnemy.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AAIEnemy_HearNoise_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AAIEnemy, nullptr, "HearNoise", nullptr, nullptr, sizeof(AIEnemy_eventHearNoise_Parms), Z_Construct_UFunction_AAIEnemy_HearNoise_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_AAIEnemy_HearNoise_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00C80401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AAIEnemy_HearNoise_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_AAIEnemy_HearNoise_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AAIEnemy_HearNoise()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AAIEnemy_HearNoise_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	struct Z_Construct_UFunction_AAIEnemy_PawnSeen_Statics
 	{
@@ -85,6 +136,7 @@ void EmptyLinkFunctionForGeneratedCodeAIEnemy() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_FPSGame,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_AAIEnemy_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_AAIEnemy_HearNoise, "HearNoise" }, // 3993607384
 		{ &Z_Construct_UFunction_AAIEnemy_PawnSeen, "PawnSeen" }, // 1199514749
 	};
 #if WITH_METADATA
@@ -132,7 +184,7 @@ void EmptyLinkFunctionForGeneratedCodeAIEnemy() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AAIEnemy, 1564531771);
+	IMPLEMENT_CLASS(AAIEnemy, 1053536984);
 	template<> FPSGAME_API UClass* StaticClass<AAIEnemy>()
 	{
 		return AAIEnemy::StaticClass();

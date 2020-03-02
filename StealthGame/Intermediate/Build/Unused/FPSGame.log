@@ -1,10 +1,9 @@
 ﻿  Using 'git status' to determine working set for adaptive non-unity build (D:\UnrealProjects\StealthGame115).
-  Invalidating makefile for FPSGameEditor (FPSGame.Build.cs modified)
   Parsing headers for FPSGameEditor
     Running UnrealHeaderTool "D:\UnrealProjects\StealthGame115\StealthGame\FPSGame.uproject" "D:\UnrealProjects\StealthGame115\StealthGame\Intermediate\Build\Win64\FPSGameEditor\Development\FPSGameEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
-  Reflection code generated for FPSGameEditor in 7.4128206 seconds
+  Reflection code generated for FPSGameEditor in 29.492801 seconds
   Using Visual Studio 2019 14.24.28314 toolchain (D:\Program Files\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.24.28314) and Windows 10.0.16299.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-  Distributing 3 actions to XGE
+  Distributing 5 actions to XGE
   --------------------Build System Warning---------------------------------------
   License is invalid:
       License information is invalid. Please try reloading your license file using the Coordinator Monitor application on the Coordinator machine, or reinstall IncrediBuild.
@@ -12,11 +11,13 @@
   
   -------------------------------------------------------------------------------
   --------------------Project: Default-------------------------------------------
-  UE4Editor-FPSGame-0022.dll (0:01.73 at +0:00)
-     Creating library D:\UnrealProjects\StealthGame115\StealthGame\Intermediate\Build\Win64\UE4Editor\Development\FPSGame\UE4Editor-FPSGame-0022.suppressed.lib and object D:\UnrealProjects\StealthGame115\StealthGame\Intermediate\Build\Win64\UE4Editor\Development\FPSGame\UE4Editor-FPSGame-0022.suppressed.exp
-  UE4Editor-FPSGame-0022.lib (0:00.46 at +0:01)
-     Creating library D:\UnrealProjects\StealthGame115\StealthGame\Intermediate\Build\Win64\UE4Editor\Development\FPSGame\UE4Editor-FPSGame-0022.lib and object D:\UnrealProjects\StealthGame115\StealthGame\Intermediate\Build\Win64\UE4Editor\Development\FPSGame\UE4Editor-FPSGame-0022.exp
-  FPSGameEditor.target (0:00.87 at +0:02)
+  FPSProjectile.cpp (2:02.42 at +0:00)
+  FPSCharacter.cpp (0:34.39 at +2:02)
+  UE4Editor-FPSGame.dll (0:01.06 at +2:36)
+     Creating library D:\UnrealProjects\StealthGame115\StealthGame\Intermediate\Build\Win64\UE4Editor\Development\FPSGame\UE4Editor-FPSGame.suppressed.lib and object D:\UnrealProjects\StealthGame115\StealthGame\Intermediate\Build\Win64\UE4Editor\Development\FPSGame\UE4Editor-FPSGame.suppressed.exp
+  UE4Editor-FPSGame.lib (0:00.43 at +2:37)
+     Creating library D:\UnrealProjects\StealthGame115\StealthGame\Intermediate\Build\Win64\UE4Editor\Development\FPSGame\UE4Editor-FPSGame.lib and object D:\UnrealProjects\StealthGame115\StealthGame\Intermediate\Build\Win64\UE4Editor\Development\FPSGame\UE4Editor-FPSGame.exp
+  FPSGameEditor.target (0:00.25 at +2:38)
   ---------------------- Done ----------------------
   
       Rebuild All: 1 succeeded, 0 failed, 0 skipped
@@ -24,5 +25,5 @@
   1 build system warning(s):
      - License is invalid
   
-  Total time in XGE executor: 3.39 seconds
-  Total execution time: 13.27 seconds
+  Total time in XGE executor: 158.85 seconds
+  Total execution time: 189.45 seconds
